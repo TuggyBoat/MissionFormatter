@@ -85,7 +85,10 @@ while True:
 
         # Supply
         supply = values['-SUPPLY-']
-        values_list.append(supply)
+        if len(supply) > 2:
+            values_list.append(supply)
+        else:
+            values_list.append(supply+'k')
 
         # ETA
         eta = values['-ETA-']
